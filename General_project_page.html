@@ -141,20 +141,33 @@
     padding: 10px;
 }
 
-.h4{
+.h4 {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 50px;
-    border-bottom: 4px solid #979797;
     width: fit-content;
     margin: 0 auto 30px auto;
-    transition: transform 0.3s ease, border-bottom-width 0.3s ease;
     cursor: pointer;
 }
-.h4:hover {
-    transform: scale(0.95);
-    border-bottom-width: 2px;
+
+.h4::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    height: 4px;
+    width: 100%; /* Start at full width */
+    background: #979797;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.h4:hover::after {
+    width: 40%; /* Shrinks on hover */
 }
 
   #navigation-bar {
