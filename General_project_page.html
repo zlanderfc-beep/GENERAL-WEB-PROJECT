@@ -98,9 +98,60 @@
     transform: scale(0.95);
     border-bottom-width: 2px;
 }
+
+  #navigation-bar {
+                width: 100%;
+                background-color: #333;
+                color: white;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 5%;
+            }
+            .logo h2 {
+                margin: 0;
+            }
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+            }
+            .nav-links li {
+                margin: 0;
+            }
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+            .nav-links a:hover {
+                color: #ff9800;
+            }
     </style>
 </head>
 <body>
+
+    <section id="navigation-bar">
+        <nav>
+            <div class="logo">
+                <h2>LOGO</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    
+
+
+    </section>
+
     <section>
         <section class="about-section">
             <h4 class="about-title">About Great Computer Engineers</h4>
