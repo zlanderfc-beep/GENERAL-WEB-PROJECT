@@ -58,14 +58,24 @@
     display: flex;
     gap: 20px;
     padding: 20px 5%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 .first_testifier{
-    background-color: antiquewhite;
+    background-color: rgb(253, 252, 252);
     border: none;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 6px 6px 8px rgb(199, 198, 198);
+    height: 300px;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+}
+.first_testifier:hover{
+    scale: 1.05;
 }
 .first_testifier .img{
     width: 80px;
@@ -98,10 +108,273 @@
     transform: scale(0.95);
     border-bottom-width: 2px;
 }
+
+  #navigation-bar {
+                width: 100%;
+                background-color: #333;
+                color: white;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 5%;
+            }
+            .logo h2 {
+                margin: 0;
+            }
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+            }
+            .nav-links li {
+                margin: 0;
+            }
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+            .nav-links a:hover {
+                color: #ff9800;
+            }
     </style>
 </head>
 <body>
-    <section></section>
+
+    <section id="navigation-bar">
+        <nav>
+            <div class="logo">
+                <h2>LOGO</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    
+
+
+    </section>
+
+    <section>
+        <section class="about-section">
+            <h4 class="about-title">About Great Computer Engineers</h4>
+            <div class="about-carousel-wrapper">
+                <button class="carousel-arrow left" aria-label="Previous">&#8592;</button>
+                <div class="about-carousel">
+                    <div class="about-person">
+                        <div class="person-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Grace_Hopper.jpg" alt="Grace Hopper">
+                        </div>
+                        <div class="person-info">
+                            <h5>Grace Hopper</h5>
+                            <p>Pioneer of computer programming, developed the first compiler and contributed to COBOL language.</p>
+                        </div>
+                    </div>
+                    <div class="about-person">
+                        <div class="person-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Alan_Turing_Aged_16.jpg" alt="Alan Turing">
+                        </div>
+                        <div class="person-info">
+                            <h5>Alan Turing</h5>
+                            <p>Father of theoretical computer science and artificial intelligence, known for breaking the Enigma code.</p>
+                        </div>
+                    </div>
+                    <div class="about-person">
+                        <div class="person-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Ada_Lovelace_portrait.jpg" alt="Ada Lovelace">
+                        </div>
+                        <div class="person-info">
+                            <h5>Ada Lovelace</h5>
+                            <p>Regarded as the first computer programmer, wrote the first algorithm for Charles Babbage's Analytical Engine.</p>
+                        </div>
+                    </div>
+                    <div class="about-person">
+                        <div class="person-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Tim_Berners-Lee_CP_2.jpg" alt="Tim Berners-Lee">
+                        </div>
+                        <div class="person-info">
+                            <h5>Tim Berners-Lee</h5>
+                            <p>Inventor of the World Wide Web, revolutionized information sharing and accessibility globally.</p>
+                        </div>
+                    </div>
+                    <div class="about-person">
+                        <div class="person-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Dennis_Ritchie_2011.jpg" alt="Dennis Ritchie">
+                        </div>
+                        <div class="person-info">
+                            <h5>Dennis Ritchie</h5>
+                            <p>Creator of the C programming language and co-developer of UNIX, foundational to modern computing.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow right" aria-label="Next">&#8594;</button>
+            </div>
+        </section>
+        <style>
+        .about-section {
+            width: 100%;
+            background: linear-gradient(120deg, #f8fafc 60%, #e3e8ee 100%);
+            padding: 50px 0 40px 0;
+            box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+        }
+        .about-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #22223b;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+        .about-carousel-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .about-carousel {
+            display: flex;
+            gap: 32px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 0;
+            width: 90vw;
+            max-width: 950px;
+        }
+        .about-person {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 24px 0 rgba(30, 41, 59, 0.10), 0 1.5px 4px 0 rgba(30, 41, 59, 0.07);
+            min-width: 260px;
+            max-width: 260px;
+            min-height: 370px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 32px 20px 24px 20px;
+            transition: box-shadow 0.3s, transform 0.3s;
+            border: 1.5px solid #e0e7ef;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .about-person:hover {
+            box-shadow: 0 12px 32px 0 rgba(30, 41, 59, 0.18), 0 2px 8px 0 rgba(30, 41, 59, 0.10);
+            transform: translateY(-6px) scale(1.03);
+            border-color: #b6c2d9;
+        }
+        .person-img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 18px auto;
+            box-shadow: 0 4px 16px 0 rgba(30, 41, 59, 0.10);
+            border: 3px solid #e0e7ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5fa;
+        }
+        .person-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .person-info {
+            text-align: center;
+        }
+        .person-info h5 {
+            font-size: 1.15rem;
+            color: #22223b;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: 0;
+            letter-spacing: 0.5px;
+        }
+        .person-info p {
+            font-size: 0.98rem;
+            color: #4b5563;
+            line-height: 1.5;
+            margin: 0;
+            font-weight: 400;
+        }
+        .carousel-arrow {
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            font-size: 1.7rem;
+            color: #22223b;
+            box-shadow: 0 2px 8px 0 rgba(30, 41, 59, 0.10);
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+            margin: 0 10px;
+            z-index: 2;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-arrow:hover {
+            background: #e0e7ef;
+            box-shadow: 0 4px 16px 0 rgba(30, 41, 59, 0.13);
+            transform: scale(1.08);
+        }
+        @media (max-width: 900px) {
+            .about-carousel {
+                gap: 18px;
+                max-width: 98vw;
+            }
+            .about-person {
+                min-width: 220px;
+                max-width: 220px;
+                padding: 24px 10px 18px 10px;
+            }
+        }
+        @media (max-width: 600px) {
+            .about-title {
+                font-size: 1.5rem;
+            }
+            .about-carousel {
+                gap: 10px;
+                max-width: 100vw;
+            }
+            .about-person {
+                min-width: 170px;
+                max-width: 170px;
+                padding: 16px 6px 12px 6px;
+            }
+            .person-img {
+                width: 64px;
+                height: 64px;
+            }
+        }
+        </style>
+        <script>
+        const carousel = document.querySelector('.about-carousel');
+        const leftBtn = document.querySelector('.carousel-arrow.left');
+        const rightBtn = document.querySelector('.carousel-arrow.right');
+        const personCard = document.querySelector('.about-person');
+        const cardWidth = personCard ? personCard.offsetWidth + 32 : 292; // 32px gap
+
+        leftBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+        rightBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+        </script>
+    </section>
  <!-- <<<<<<< HEAD -->
     <section>
         <h4 class="h4">Testimonials</h4>
@@ -152,9 +425,7 @@
         </div>
     </section>
     
-
     <section></section>
-
     <section>
         <div class="Footer">
    
@@ -164,12 +435,6 @@
     <a href="">  DO NOT SELL MY PERSONAL INFORMATION  </a>
           <h5>©™. SPECIAL TEAM LandmarkBootCamp 2025</h5>
    </div>
-    </section>
-    
-
-
-
-
-    
+    </section>  
 </body>
 </html>
