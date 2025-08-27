@@ -105,14 +105,25 @@
     display: flex;
     gap: 20px;
     padding: 20px 5%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .first_testifier{
-    background-color: antiquewhite;
+    background-color: rgb(253, 252, 252);
     border: none;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 6px 6px 8px rgb(199, 198, 198);
+    height: 300px;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+}
+.first_testifier:hover{
+    scale: 1.05;
 }
 .first_testifier .img{
     width: 80px;
