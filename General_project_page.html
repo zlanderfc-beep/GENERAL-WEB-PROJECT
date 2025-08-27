@@ -236,16 +236,16 @@
     <section id="navigation-bar">
         <nav>
             <div class="logo">
-                <h2>LOGO</h2>
+                <h2>TechStory</h2>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonial</a></li>
+                <li><a href="#footer">Reach out</a></li>
             </ul>
         </nav>
-        <div class="home">
+        <div class="home" id="home">
         <h1>Welcome to Our Project Page</h1>
         <p>Discover our latest projects and innovations.</p>   
         <button>Get Started</button>
@@ -254,7 +254,7 @@
 
     </section>
 
-    <section>
+    <section id="about"> 
         <section class="about-section">
             <h4 class="about-title">About Great Computer Engineers</h4>
             <div class="about-carousel-wrapper">
@@ -262,7 +262,7 @@
                 <div class="about-carousel">
                     <div class="about-person">
                         <div class="person-img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Grace_Hopper.jpg" alt="Grace Hopper">
+                            <img src="pics/800px-Grace_Hopper_in_the_1940s.webp.png" alt="Grace Hopper">
                         </div>
                         <div class="person-info">
                             <h5>Grace Hopper</h5>
@@ -271,7 +271,7 @@
                     </div>
                     <div class="about-person">
                         <div class="person-img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Alan_Turing_Aged_16.jpg" alt="Alan Turing">
+                            <img src="pics/24turing1-articleLarge.jpg" alt="Alan Turing">
                         </div>
                         <div class="person-info">
                             <h5>Alan Turing</h5>
@@ -280,7 +280,7 @@
                     </div>
                     <div class="about-person">
                         <div class="person-img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Ada_Lovelace_portrait.jpg" alt="Ada Lovelace">
+                            <img src="pics/ra1146.jpg" alt="Ada Lovelace">
                         </div>
                         <div class="person-info">
                             <h5>Ada Lovelace</h5>
@@ -289,7 +289,7 @@
                     </div>
                     <div class="about-person">
                         <div class="person-img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Tim_Berners-Lee_CP_2.jpg" alt="Tim Berners-Lee">
+                            <img src="pics/Tim-Berners-Lee-640-1.jpg" alt="Tim Berners-Lee">
                         </div>
                         <div class="person-info">
                             <h5>Tim Berners-Lee</h5>
@@ -298,7 +298,7 @@
                     </div>
                     <div class="about-person">
                         <div class="person-img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Dennis_Ritchie_2011.jpg" alt="Dennis Ritchie">
+                            <img src="pics/Dennis_Ritchie_2011.jpg" alt="Dennis Ritchie">
                         </div>
                         <div class="person-info">
                             <h5>Dennis Ritchie</h5>
@@ -315,6 +315,7 @@
             background: linear-gradient(120deg, #f8fafc 60%, #e3e8ee 100%);
             padding: 50px 0 40px 0;
             box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+            
         }
         .about-title {
             text-align: center;
@@ -340,14 +341,20 @@
             padding: 10px 0;
             width: 90vw;
             max-width: 950px;
-        }
+            scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+.about-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+        
         .about-person {
             background: #fff;
             border-radius: 18px;
             box-shadow: 0 6px 24px 0 rgba(30, 41, 59, 0.10), 0 1.5px 4px 0 rgba(30, 41, 59, 0.07);
-            min-width: 260px;
+            min-width: 340px;
             max-width: 260px;
-            min-height: 370px;
+            min-height: 390px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -467,8 +474,7 @@
         });
         </script>
     </section>
- <!-- <<<<<<< HEAD -->
-    <section>
+    <section class="testimonials" id="testimonials">
         <h4 class="h4">Testimonials</h4>
         <div class="testimonials">
             <div class="first_testifier">
@@ -516,9 +522,8 @@
             
         </div>
     </section>
-    
-    <section></section>
-    <section>
+ <!-- ======= -->
+    <section id="footer">
     <!------social media-------->
    <div class="footer-socials">
    <h4>FOLLOW US</h4>
@@ -561,5 +566,10 @@
           <h5>©™. SPECIAL TEAM LandmarkBootCamp 2025</h5>
    </div>
     </section>  
+    <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    </style>
 </body>
 </html>
