@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Lato", sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+}
+h2{
+  text-align: center;
+  margin-bottom: 25px;
+}
+.container{
+  border: 2px solid rgba(255,255,255,0.2);
+  padding-left: 20px;
+  width: 500px;
+  margin-top: 50px;
+  margin-left: 400px;
+  border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 60px;
+}
+label{
+  display: block;
+  margin-bottom: 1px;
+}
+input, select{
+  padding: 7px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: transparent;
+}
+.name-container{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.user-option-container{
+  display: flex;
+  justify-content: space-between;
+}
+.user-option-container select{
+  display: block;
+  justify-content: space-between;
+  width: 180px;
+}
+.terms-container{
+  justify-content: center;
+}
+.terms-container input{
+ justify-content: center;
+  width: auto;
+  margin-right: 5px;
+}
+.signup-button{
+  padding: 10px 5px;
+  margin-top: 20px;
+  background-color: #1e90ff;
+  font-family: lato, sans-serif;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(30, 144, 255, 0.4);
+}
+.signup-button:hover{
+  background-color: #0d6efd;
+  box-shadow: 0 6px 12px rgba(13, 110, 253, 0.6);
+}
+.signup-button:active{
+  transform: translate(2px);
+  opacity: 0.7;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+.login-link{
+  text-align: center;
+  margin-top: 13px;
+}
+
+  </style>
+  <title>Sign up Page</title>
+</head>
+<body>
+  <div class="container">
+  <form action="">
+    <h2>Sign Up</h2>
+    <div class="name-container">
+      <div class="firstname-container">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" required maxlength="20" placeholder="John">
+        <i class="bx bxs-user"></i>
+      </div>
+      
+      <div>
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" required maxlength="20" placeholder="Smith">
+      </div>  
+    </div>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required placeholder="johnsmith">
+
+    <div class="user-option-container">
+      <div>
+        <label for="country">Country</label>
+        <select id="country" name="country" class="country" required>
+          <option value="select-your-country">Select your country</option>
+          <option value="cameroon">Cameroon</option>
+          <option value="congo">Congo</option>
+          <option value="cote-d'ivoire">Cote d'ivoire</option>
+          <option value="nigeria">Nigeria</option>
+        </select>
+      </div>
+      <div>
+        <label for="gender">Gender</label>
+        <select name="user-gender" id="gender">
+          <option value="select-your-gender">Select your Gender</option>
+          <option value="male">Male</option>
+          <option value="">Female</option>
+          <option value="">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+    
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required placeholder="********" minlength="8">
+  
+
+    <label for="confirm_password">Confirm Password</label>
+    <input type="password" id="confirm_password" name="confirm_password" required minlength="8">
+  
+    <div class="terms-container">
+    <input type="checkbox" id="terms" name="terms" required class="terms">
+    <label for="terms" style="display: inline;">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+    </div>
+
+    <button type="submit" class="signup-button">Sign Up</button>
+    <div class="login-link">
+    <p>Already have a account? <a href="#">Log in</a></p>
+    </div>
+  </form>
+  </div>
+</body>
+</html>
